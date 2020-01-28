@@ -1,0 +1,134 @@
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+button {
+  margin: 0 20px;
+  padding: 15px 40px;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  color: white;
+  letter-spacing: 1px;
+  outline: none;
+  cursor: pointer;
+}
+
+.top-left {
+  background-color: dodgerblue;
+}
+
+.top-right {
+  background-color: tomato;
+}
+
+.bottom-left {
+  background-color: rgb(184, 184, 0);
+}
+
+.bottom-right {
+  background-color: rgb(105, 175, 0);
+}
+
+.fa {
+  position: absolute;
+  top: 6%;
+  right: 3%;
+  cursor: pointer;
+}
+
+.top-left-toast {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  background-color: dodgerblue;
+  color: white;
+  text-align: center;
+  padding: 20px 50px;
+  border-radius: 5px;
+  margin: 5px;
+  animation: toastHover 2s infinite;
+  opacity: 0;
+  transition: opacity 0.2s;
+  pointer-events: none;
+}
+
+.top-right-toast {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  background-color: tomato;
+  color: white;
+  text-align: center;
+  padding: 20px 50px;
+  border-radius: 5px;
+  margin: 5px;
+  animation: toastHover 2s infinite;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s;
+}
+
+.bottom-right-toast {
+  position: absolute;
+  bottom: 1%;
+  right: 0%;
+  background-color: rgb(105, 175, 0);
+  color: white;
+  text-align: center;
+  padding: 20px 50px;
+  border-radius: 5px;
+  margin: 5px;
+  animation: toastHover 2s infinite;
+  opacity: 0;
+  transition: opacity 0.2s;
+  pointer-events: none;
+}
+
+.bottom-left-toast {
+  position: absolute;
+  bottom: 1%;
+  left: 0%;
+  background-color: rgb(184, 184, 0);
+  color: white;
+  text-align: center;
+  padding: 20px 50px;
+  border-radius: 5px;
+  margin: 5px;
+  animation: toastHover 2s infinite;
+  opacity: 0;
+  transition: opacity 0.2s;
+  pointer-events: none;
+}
+
+.show {
+  opacity: 1;
+  pointer-events: all;
+}
+h1 {
+  font-size: 20px;
+}
+
+@keyframes toastHover {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(3px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
